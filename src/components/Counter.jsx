@@ -4,8 +4,12 @@ const Counter = () => {
 
     const [count, setCount] = useState(1);
 
+    const handleSubtract = () => {
+        if(count > 0)
+            setCount(count - 1);
+    }
+
     const handleAdd = () => setCount(count + 1)
-    const handleSubtract = () => setCount(count - 1)
     const handleRandom = () => setCount(Math.floor(Math.random() * 101))
 
     return (
