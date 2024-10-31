@@ -13,9 +13,11 @@ describe('<Counter />', () => {
     describe('det ska finnas och synas tre knappar: "+", "-", "random" ', () => {
         it('should have + button', () => {
             const plusButton = cy.get(".add-button").contains("+");
-            plusButton.should("be.visible");
+            plusButton.should("be.visible");})
+        it('should have - button', () => {
             const minusButton = cy.get(".subtract-button").contains("-");
-            minusButton.should("be.visible");
+            minusButton.should("be.visible");})
+        it('should have random button', () => {
             const randomButton = cy.get(".random-button").contains("Surprise me!");
             randomButton.should("be.visible");
         })
